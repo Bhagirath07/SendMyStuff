@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transporter Registration</title>
+</head>
+
+<body>
+    <form class="form-register" action="" method=""> {% csrf_token %}
+      <div class="text-center mb-10">
+        <h1 class="h3 mb-3 font-weight-normal">Transporter Registration</h1>
+      </div><hr> <br>
+
+
+      <div class="form-label-group">
+        <label for="name">Name  </label>
+        <input type="text" id="name" class="form-control" placeholder="Enter Your Name" required="" autofocus="">
+      </div><br>
+
+      <div class="form-label-group">
+        <label for="email">Email address </label>
+        <input type="email" id="email" class="form-control" placeholder="Enter Your Email" required="" autofocus="">
+      </div><br>
+
+      <div class="form-label-group">
+        <label for="phone">Contact No.</label>
+        <input type="tel" id="phone" class="form-control" placeholder="Enter Your Phone no." required="" autofocus="">
+      </div><br>
+
+      <div class="form-label-group">
+        <label for="dob">D.O.B </label>
+        <input type="date" id="dob" class="form-control" placeholder="D.O.B" required="" autofocus="">
+      </div><br>
+
+      <div class="form-label-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Password" required="">
+      </div><br>
+
+      <div class="form-label-group">
+        <label for="password">Confirm Password</label>
+        <input type="password" id="cpassword" class="form-control" placeholder="Confirm Password" required="">
+      </div><br>
+
+      <div class="form-label-group">
+        <label for="company">Company</label>
+        <input type="text" id="company" class="form-control" placeholder="Enter Company Name" required="" autofocus="">
+      </div><br>
+
+      <div class="form-label-group">
+        <label for="uidaino">UIDAI No.</label>
+        <input type="number" id="uidaino" class="form-control" placeholder="Enter UIDAI no." required="" autofocus="">
+      </div><br>
+
+      <div class="form-label-group">
+        <label for="nogst">GST No.</label>
+        <input type="number" id="nogst" class="form-control" placeholder="Enter GST no." required="" autofocus="">
+      </div><br>
+
+       <div class="form-label-group">
+        <label for="panno">PAN No.</label>
+        <input type="number" id="panno" class="form-control" placeholder="Enter PAN no." required="" autofocus="">
+      </div><br>
+
+      <hr>
+      <h3>NOC from JURISDICTION AREA POLICE : </h3>
+      <form>
+      <div class="form-group">
+          <input type="file" class="form-control-file" id="fileselect">
+      </div>
+      </form>
+          <br>
+      <hr>
+      <div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+      </div>
+    </form>
+    <br>
+    <div>
+      <a href="{% url 'login' %}">Already Registered</a>
+    </div>
+
+</body>
+
+</html>

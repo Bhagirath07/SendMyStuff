@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+
+<body>
+
+<form class="form-register" action="" method=""> {% csrf_token %}
+  <div class="text-center mb-4">
+    <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+  </div><hr><br>
+
+    <div class="dropdown-menu">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" name="email" class="form-control" id="email" placeholder="email@example.com">
+        </div><br>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+        </div><br>
+
+        <div class="form-group">
+          <div class="form-check">
+            <input type="checkbox" name="reminder" class="form-check-input" id="dropdownCheck">
+            <label class="form-check-label" for="dropdownCheck">
+              Remember me
+            </label>
+          </div>
+        </div><br>
+
+        <button type="submit" class="btn btn-primary">Log in</button>
+
+      <div class="dropdown-divider"></div><br>
+      <a class="dropdown-item" href="#">Forgot password?</a>
+      <!--  <a class="dropdown-item" href="{% url 'signup' %}">Create an Account</a>-->
+      </div>
+    </form>
+</body>
+</html>
