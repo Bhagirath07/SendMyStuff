@@ -6,93 +6,85 @@
 </head>
 
 <body>
-    <form class="form-register">
+    <form class="form-register" action="{% url 'owner_reg' %}" method="POST"> {% csrf_token %}
       <div class="text-center mb-10">
         <h1 class="h3 mb-3 font-weight-normal">Fleet Owner Registration</h1>
-      </div><hr> <br>
+      </div><hr><br>
 
-
-      <div class="form-label-group">
+      <div>
         <label for="name">Name  </label>
-        <input type="text" id="name" class="form-control" placeholder="Enter Your Name" required="" autofocus="">
+        <input type="text" id="name" name="name" placeholder="Enter Your Name" required="" autofocus="">
       </div><br>
 
-      <div class="form-label-group">
+      <div>
         <label for="email">Email address </label>
-        <input type="email" id="email" class="form-control" placeholder="Enter Your Email" required="" autofocus="">
+        <input type="email" id="email" name="email" placeholder="Enter Your Email" required="" autofocus="">
       </div><br>
 
-      <div class="form-label-group">
+      <div>
         <label for="phone">Contact No.</label>
-        <input type="tel" id="phone" class="form-control" placeholder="Enter Your Phone no." required="" autofocus="">
+        <input type="tel" id="phone" name="contact" placeholder="Enter Your Phone no." required="" autofocus="">
       </div><br>
 
-      <div class="form-label-group">
+      <div>
         <label for="dob">D.O.B </label>
-        <input type="date" id="dob" class="form-control" placeholder="D.O.B" required="" autofocus="">
+        <input type="date" id="dob" name="dob" placeholder="D.O.B" required="" autofocus="">
       </div><br>
 
-      <div class="form-label-group">
+      <div>
         <label for="password">Password</label>
-        <input type="password" id="password" class="form-control" placeholder="Password" required="">
+        <input type="password" id="password" name="password" placeholder="Password" required="">
       </div><br>
 
-      <div class="form-label-group">
-        <label for="password">Confirm Password</label>
-        <input type="password" id="cpassword" class="form-control" placeholder="Confirm Password" required="">
+      <div>
+        <label for="cpassword">Confirm Password</label>
+        <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" required="">
       </div><br>
 
-      <div class="form-label-group">
+      <div>
         <label for="company">Company</label>
-        <input type="text" id="company" class="form-control" placeholder="Enter Company Name" required="" autofocus="">
+        <input type="text" id="company" name="company" placeholder="Enter Company Name" required="" autofocus="">
       </div><br>
 
-      <div class="form-label-group">
-        <label for="uidaino">UIDAI No.</label>
-        <input type="number" id="uidaino" class="form-control" placeholder="Enter UIDAI no." required="" autofocus="">
+      <div>
+        <label for="uidaino">UIDAI No. </label>
+        <input type="number" id="uidaino" name="uidaino" placeholder="Enter UIDAI No." required="" autofocus="">
       </div><br>
 
-      <div class="form-label-group">
-        <label for="nogst">GST No.</label>
-        <input type="number" id="nogst" class="form-control" placeholder="Enter GST no." required="" autofocus="">
+      <div>
+        <label for="gst">GST No.</label>
+        <input type="number" id="gst" name="gst" placeholder="Enter GST no." required="" autofocus="">
       </div><br>
 
-       <div class="form-label-group">
-        <label for="notruck">No. of Trucks </label>
-        <input type="number" id="notruck" class="form-control" placeholder="Total No. of Trucks" required="" autofocus="">
+      <div>
+        <label for="truck">No. of Trucks </label>
+        <input type="number" id="truck" name="truck" placeholder="Total No. of Trucks" required="" autofocus="">
       </div><br>
 
-      <div class="form-label-group">
-        <label for="nodriver">No. of Drivers</label>
-        <input type="number" id="nodriver" class="form-control" placeholder="Total No. of Driver" required="" autofocus="">
+      <div>
+        <label for="driver">No. of Drivers</label>
+        <input type="number" id="driver" name="driver" placeholder="Total No. of Driver" required="" autofocus="">
       </div><br>
 
-      <div class="form-label-group">
-        <label for="oproute">Routes of Operation</label>
-        <input type="number" id="oproute" class="form-control" placeholder="Opertaions" required="" autofocus="">
+      <div>
+        <label for="route">Routes of Operation</label>
+        <input type="number" id="route" name="route" placeholder="Opertaions" required="" autofocus="">
       </div><br>
 
-       <div class="form-group">
-        <label for="address">Example textarea</label>
-        <textarea class="form-control" id="address" rows="5"></textarea>
-      </div>
+      <div>
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="5"></textarea>
+      </div><hr>
 
-       <hr>
       <h3>Company T&C : </h3>
-      <form>
-        <div class="form-group">
-          <input type="file" class="form-control-file" id="comptc">
-        </div>
-      </form><br>
+        <div>
+          <input type="file" id="comptc">
+        </div><br>
 
       <h3>NOC from JURISDICTION AREA POLICE : </h3>
-      <form>
-        <div class="form-group">
-          <input type="file" class="form-control-file" id="fileselect">
-        </div>
-        </form><br>
-
-        <hr>
+        <div>
+          <input type="file" id="fileselect">
+        </div><br><hr>
 
        <div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
@@ -101,7 +93,5 @@
     <div>
       <a href="{% url 'login' %}">Already Registered</a>
     </div>
-
 </body>
-
 </html>
